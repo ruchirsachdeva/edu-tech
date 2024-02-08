@@ -1,0 +1,7 @@
+{
+  "name": "edu-tech",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
