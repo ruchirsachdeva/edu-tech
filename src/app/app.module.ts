@@ -6,15 +6,20 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NavbarComponent } from './components/common/navbar/navbar.component';
-import { TopHeaderComponent } from './components/common/top-header/top-header.component';
-import { HomeBannerComponent } from './components/common/home-banner/home-banner.component';
 import { HomeComponent } from './components/pages/home/home.component';
-import { FeaturedCoursesComponent } from './components/common/featured-courses/featured-courses.component';
+import { NavbarComponent } from './components/common/navbar/navbar.component';
+import { FeaturedCoursesComponent } from './components/pages/home/featured-courses/featured-courses.component';
+import { AboutSectionComponent } from './components/pages/home/about-section/about-section.component';
+import { HomeBannerComponent } from './components/pages/home/home-banner/home-banner.component';
+import { TestimonialsComponent } from './components/pages/home/testimonials/testimonials.component';
+import { AccreditationsComponent } from './components/pages/home/accreditations/accreditations.component';
+import { FooterComponent } from './components/common/footer/footer.component';
+
+
 
 
 @NgModule({
-  declarations: [AppComponent,HomeComponent ,TopHeaderComponent, NavbarComponent,HomeBannerComponent, FeaturedCoursesComponent ],
+  declarations: [AppComponent,HomeComponent, NavbarComponent,FooterComponent,HomeBannerComponent, FeaturedCoursesComponent, AboutSectionComponent, TestimonialsComponent, AccreditationsComponent ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
