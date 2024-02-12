@@ -14,12 +14,15 @@ import { HomeBannerComponent } from './components/pages/home/home-banner/home-ba
 import { TestimonialsComponent } from './components/pages/home/testimonials/testimonials.component';
 import { AccreditationsComponent } from './components/pages/home/accreditations/accreditations.component';
 import { FooterComponent } from './components/common/footer/footer.component';
+import { CoursesComponent } from './components/pages/courses/courses.component';
+import { LoginComponent } from './components/pages/login/login.component';
+import { RegisterComponent } from './components/pages/register/register.component';
 
 
 
 
 @NgModule({
-  declarations: [AppComponent,HomeComponent, NavbarComponent,FooterComponent,HomeBannerComponent, FeaturedCoursesComponent, AboutSectionComponent, TestimonialsComponent, AccreditationsComponent ],
+  declarations: [AppComponent,HomeComponent, NavbarComponent,FooterComponent,HomeBannerComponent, FeaturedCoursesComponent, AboutSectionComponent, TestimonialsComponent, AccreditationsComponent, CoursesComponent, LoginComponent, RegisterComponent ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
