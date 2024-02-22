@@ -255,9 +255,9 @@
 
         .navbar {
             .navbar-nav {
-                display: none;
+                display: flex;
                 max-height: 50vh;
-                flex-direction: unset;
+                flex-direction: column;
                 background-color: #f8f8f8;
 
                 overflow: {
@@ -457,10 +457,11 @@
 
         .navbar {
             .navbar-nav {
-                display: none;
+                display: flex;
                 max-height: 50vh;
-                flex-direction: unset;
+                flex-direction: row;
                 background-color: #f8f8f8;
+                justify-content: space-between;
 
                 overflow: {
                     y: scroll;
@@ -511,9 +512,9 @@
 
                 
 
-                    &:first-child {
-                        margin-top: 0;
-                    }
+                    // &:first-child {
+                    //     margin-top: 0;
+                    // }
 
                     &:last-child {
                         margin-bottom: 0;
