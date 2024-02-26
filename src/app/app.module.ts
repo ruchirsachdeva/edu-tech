@@ -4,6 +4,11 @@ import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-courses.service';
+
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/pages/home/home.component';
@@ -21,13 +26,18 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CourseItemComponent } from './components/common/course-item/course-item.component';
 import { EnrolledCoursesComponent } from './components/dashboard/enrolled-courses/enrolled-courses.component';
 import { MyProfileComponent } from './components/dashboard/my-profile/my-profile.component';
+import { CourseDetailsComponent } from './components/pages/course-details/course-details.component';
+
 
 
 
 
 @NgModule({
-  declarations: [AppComponent,HomeComponent, NavbarComponent,FooterComponent,HomeBannerComponent, FeaturedCoursesComponent, AboutSectionComponent, TestimonialsComponent, AccreditationsComponent, CoursesComponent, LoginComponent, RegisterComponent, DashboardComponent, CourseItemComponent, EnrolledCoursesComponent, MyProfileComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  declarations: [AppComponent,HomeComponent, NavbarComponent,FooterComponent,HomeBannerComponent, FeaturedCoursesComponent, AboutSectionComponent, TestimonialsComponent, AccreditationsComponent, CoursesComponent, LoginComponent, RegisterComponent, DashboardComponent, CourseItemComponent, EnrolledCoursesComponent, MyProfileComponent, CourseDetailsComponent],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

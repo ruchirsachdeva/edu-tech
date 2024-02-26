@@ -16,6 +16,7 @@ export class CourseItemComponent  implements OnInit {
     
   }
 
+  @Input() id!: number;
   @Input() imageUrl!: string;
   @Input() level!: string;
   @Input() price!: string;

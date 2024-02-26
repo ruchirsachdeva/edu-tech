@@ -7,6 +7,7 @@ import { RegisterComponent } from './components/pages/register/register.componen
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { EnrolledCoursesComponent } from './components/dashboard/enrolled-courses/enrolled-courses.component';
 import { MyProfileComponent } from './components/dashboard/my-profile/my-profile.component';
+import { CourseDetailsComponent } from './components/pages/course-details/course-details.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ component: CoursesComponent},
 component: LoginComponent},
 {  path: 'register',
 component: RegisterComponent},
+
+{  path: 'course-details/:id',
+component: CourseDetailsComponent},
+
   {
     path: 'dashboard',
     component: DashboardComponent,
