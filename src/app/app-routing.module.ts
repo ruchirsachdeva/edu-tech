@@ -5,6 +5,8 @@ import { CoursesComponent } from './components/pages/courses/courses.component';
 import { LoginComponent } from './components/pages/login/login.component';
 import { RegisterComponent } from './components/pages/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { EnrolledCoursesComponent } from './components/dashboard/enrolled-courses/enrolled-courses.component';
+import { MyProfileComponent } from './components/dashboard/my-profile/my-profile.component';
 
 const routes: Routes = [
   {
@@ -21,7 +23,13 @@ component: LoginComponent},
 component: RegisterComponent},
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
+    children: [
+      {  path: 'enrolled-courses',
+component: EnrolledCoursesComponent},
+    {  path: 'my-profile',
+component: MyProfileComponent},
+    ]
   }
 
 

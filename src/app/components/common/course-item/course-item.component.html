@@ -1,0 +1,39 @@
+
+<div class="single-course-item">
+    <a routerLink="/courses-details" class="courses-img">
+        <img [src]="imageUrl" alt="Image">
+        <span class="levels">{{ level }}</span>
+        <span class="price">{{ price }}</span>
+        <button type="submit" class="wishlist"><i class="ri-heart-line"></i></button>
+    </a>
+    <div class="courses-content">
+        <h3>
+            <a routerLink="/courses-details">{{ courseName }}</a>
+        </h3>
+        <!-- Add dynamic rating stars and reviews here -->
+        <ul class="status d-flex justify-content-between align-items-center">
+            <li>
+                <i class="ri-time-line"></i>
+                {{ totalHours }} Total hours
+            </li>
+            <li>
+                <i class="ri-user-add-line"></i>
+                {{ students }} Students
+            </li>
+        </ul>
+        <ul class="author d-flex justify-content-between align-items-center">
+            <li>
+                <a routerLink="/author">
+                    <img [src]="authorImage" alt="">
+                    By: {{ authorName }}
+                </a>
+            </li>
+            <li class="cart-btn">
+                <button type="submit" class="add-btn">
+                    <i class="ri-shopping-cart-line"></i>
+                    <span>Add To Cart</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>

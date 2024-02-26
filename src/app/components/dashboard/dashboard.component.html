@@ -21,37 +21,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-                routerLink="/dashboard/wishlist">
-                <i class="bx bx-bookmark-alt"></i>
-                Wishlist
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
                 routerLink="/dashboard/my-profile">
                 <i class="bx bx-user"></i>
                 My Profile
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-                routerLink="/dashboard/edit-profile">
-                <i class='bx bx-user-plus'></i>
-                Edit Profile
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-                routerLink="/dashboard/active-courses">
-                <i class="bx bx-book"></i>
-                Active Courses
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-                routerLink="/dashboard/orders-list">
-                <i class="bx bxs-shopping-bag"></i>
-                Orders List
               </a>
             </li>
             <li class="nav-item">
@@ -61,258 +33,56 @@
                 Reviews
               </a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-                routerLink="/dashboard/completed-courses">
-                <i class="bx bxs-book-bookmark"></i>
-                Completed Courses
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-                routerLink="/dashboard/cart">
-                <i class='bx bx-cart'></i>
-                Cart
+                routerLink="/">
+                <i class='ri-logout-circle-line'></i>
+                Logout
               </a>
             </li>
           </ul>
         </div>
+
       </div>
-      <div class="col-lg-9 col-md-12">
-        <ng-container *ngIf="(router.url === '/dashboard'); else elseBlock">
-          <div class="dashboard-stats">
-            <div class="row">
-              <div class="col-lg-4 col-md-6">
-                <div class="stats-box">
-                  <div class="icon ms-auto me-auto rounded-circle position-relative">
-                    <i class="bx bx-book-bookmark"></i>
-                  </div>
-                  <h3>70</h3>
-                  <span class="d-block">Total Courses</span>
+
+    <div class="col-lg-9 col-md-12">
+       <ng-container *ngIf="(router.url === '/dashboard'); else elseBlock">
+
+    <div class="container-fluid">
+
+        <!-- Total -->
+        <div class="row justify-content-center">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-6">
+                <div class="db-single-courses">
+                    <i class="ri-book-open-line"></i>
+                    <h2>09</h2>
+                    <span>Total Enrolled Courses</span>
                 </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="stats-box">
-                  <div class="icon ms-auto me-auto rounded-circle position-relative">
-                    <i class='bx bx-book-reader'></i>
-                  </div>
-                  <h3>25</h3>
-                  <span class="d-block">Enrolled Courses</span>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="stats-box">
-                  <div class="icon ms-auto me-auto rounded-circle position-relative">
-                    <i class='bx bx-book'></i>
-                  </div>
-                  <h3>05</h3>
-                  <span class="d-block">Active Courses</span>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="stats-box">
-                  <div class="icon ms-auto me-auto rounded-circle position-relative">
-                    <i class='bx bx-cube'></i>
-                  </div>
-                  <h3>10</h3>
-                  <span class="d-block">Completed Courses</span>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="stats-box">
-                  <div class="icon ms-auto me-auto rounded-circle position-relative">
-                    <i class='bx bx-group'></i>
-                  </div>
-                  <h3>200+</h3>
-                  <span class="d-block">Total Students</span>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="stats-box">
-                  <div class="icon ms-auto me-auto rounded-circle position-relative">
-                    <i class='bx bx-dollar'></i>
-                  </div>
-                  <h3>$25K</h3>
-                  <span class="d-block">Total Earnings</span>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="courses-table">
-            <div class="table-responsive">
-              <table class="table align-middle">
-                <thead>
-                  <tr>
-                    <th scope="col">Course Name</th>
-                    <th scope="col">Enrolled</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Rating</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">
-                      <a routerLink="/course-details">
-                        Deep Learning a-z Hands on Artificial Neural Networks
-                      </a>
-                    </th>
-                    <td>
-                      20
-                    </td>
-                    <td>
-                      $19
-                    </td>
-                    <td>
-                      <div class="rating">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <a routerLink="/course-details">
-                        The Data Science Courses Complete Data Science
-                      </a>
-                    </th>
-                    <td>
-                      10
-                    </td>
-                    <td>
-                      $44
-                    </td>
-                    <td>
-                      <div class="rating">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bx-star'></i>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <a routerLink="/course-details">
-                        Node.js for Beginners Go From Zero Hero Nede.js
-                      </a>
-                    </th>
-                    <td>
-                      31
-                    </td>
-                    <td>
-                      $43
-                    </td>
-                    <td>
-                      <div class="rating">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star-half'></i>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <a routerLink="/course-details">
-                        Successful Negotiation: Master Your Negotiating
-                      </a>
-                    </th>
-                    <td>
-                      54
-                    </td>
-                    <td>
-                      $123
-                    </td>
-                    <td>
-                      <div class="rating">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bx-star'></i>
-                        <i class='bx bx-star'></i>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <a routerLink="/course-details">
-                        Java Programming Master Class for Software
-                      </a>
-                    </th>
-                    <td>
-                      32
-                    </td>
-                    <td>
-                      $65
-                    </td>
-                    <td>
-                      <div class="rating">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <a routerLink="/course-details">
-                        Machine Learning A-Z™: Hands-On Python & R
-                      </a>
-                    </th>
-                    <td>
-                      43
-                    </td>
-                    <td>
-                      $33
-                    </td>
-                    <td>
-                      <div class="rating">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bx-star'></i>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <a routerLink="/course-details">
-                        Node.js for Beginners Go From Zero Hero Nede.js
-                      </a>
-                    </th>
-                    <td>
-                      15
-                    </td>
-                    <td>
-                      $99
-                    </td>
-                    <td>
-                      <div class="rating">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-6">
+                <div class="db-single-courses">
+                    <i class="ri-movie-line"></i>
+                    <h2>02</h2>
+                    <span>Active Courses</span>
+                </div>
             </div>
-          </div>
-        </ng-container>
-        <ng-template #elseBlock>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-6">
+                <div class="db-single-courses">
+                    <i class="ri-check-line"></i>
+                    <h2>07</h2>
+                    <span>Completed Courses</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </ng-container>
+            <ng-template #elseBlock>
           <router-outlet></router-outlet>
         </ng-template>
-      </div>
+
+</div>
     </div>
   </div>
 </div>
