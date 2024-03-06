@@ -30,15 +30,16 @@
                 "input": "node_modules/ionicons/dist/ionicons/svg",
                 "output": "./svg"
               },
-                            "src/assets"
-
+              "src/assets"
             ],
-            "styles": ["src/theme/variables.scss", "node_modules/bootstrap/scss/bootstrap.scss",
+            "styles": [
+              "src/theme/variables.scss",
+              "node_modules/bootstrap/scss/bootstrap.scss",
               "node_modules/boxicons/css/boxicons.min.css",
               "src/assets/fonts/flaticon_mycollection.css",
-                                      "node_modules/remixicon/fonts/remixicon.css","src/global.scss"
-
-              ],
+              "node_modules/remixicon/fonts/remixicon.css",
+              "src/global.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -118,7 +119,10 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": [
+              "src/theme/variables.scss",
+              "src/global.scss"
+            ],
             "scripts": []
           },
           "configurations": {

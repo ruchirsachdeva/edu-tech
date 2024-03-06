@@ -9,10 +9,22 @@
     --whiteColor: #ffffff;
     --blackColor: #21225F;
     --borderColor: #eeeeee;
-        --transition: all ease .5s;
-        --fontSize: 16px;
-        --borderRadius: 5px;
-        --boxShadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+    --transition: all ease .5s;
+    --fontSize: 16px;
+    --borderRadius: 5px;
+    --boxShadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+    --success-opacity: #3EB75E10;
+    --color-success: #3EB75E;
+    --color-danger: #FF0003;
+
+    --primary-opacity: #2f57ef21;
+    --danger-opacity: #FF000310;
+    --color-gray-light: #F6F6F6;
+
+
+
+
+
 }
 
 
@@ -48,7 +60,7 @@ h6 {
 a {
     transition: var(--transition);
     color: var(--blackColor);
-    text-decoration: none; 
+    text-decoration: none;
     outline: 0 !important;
 
     &:hover {
@@ -223,12 +235,12 @@ button {
         font-size: 15px;
     }
 
-            	.top-title {
-            	    display: block;
-            	    font-size: 15px;
-            	    margin-bottom: 8px;
-            	    color: var(--primaryColor);
-            	}
+    .top-title {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 8px;
+        color: var(--primaryColor);
+    }
 
     h2 {
         font: {
@@ -236,13 +248,13 @@ button {
             weight: 700;
         }
 
-                    	span {
-                    	    color: var(--primaryColor);
-                    	}
-            
-                    	&:last-child {
-                    	    margin-bottom: 0;
-                    	}
+        span {
+            color: var(--primaryColor);
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
         ;
     }
@@ -256,36 +268,36 @@ button {
             right: auto;
         }
 
-                span {
-                    color: var(--primaryColor);
-                }
+        span {
+            color: var(--primaryColor);
+        }
 
         ;
     }
 
-            	&.white-title {
-            	    span {
-            	        color: var(--primaryColor);
-            	    }
-        
-            	    h2 {
-            	        color: var(--whiteColor);
-            	    }
-        
-            	    p {
-            	        color: var(--whiteColor);
-            	    }
-            	}
-        
-            	&.left-title {
-            	    margin-left: 0;
-            	    max-width: 100%;
-            	    text-align: start;
-        
-            	    h2 {
-            	        margin-bottom: 0;
-            	    }
-            	}
+    &.white-title {
+        span {
+            color: var(--primaryColor);
+        }
+
+        h2 {
+            color: var(--whiteColor);
+        }
+
+        p {
+            color: var(--whiteColor);
+        }
+    }
+
+    &.left-title {
+        margin-left: 0;
+        max-width: 100%;
+        text-align: start;
+
+        h2 {
+            margin-bottom: 0;
+        }
+    }
 }
 
 // Default Btn
@@ -797,11 +809,12 @@ button {
 
 // Pagination
 .pagination-area {
-display: flex;
+    display: flex;
     margin-top: 15px;
     text-align: center;
     align-items: center;
     justify-content: center;
+
     .pagination {
         .page-item {
             display: inline-block;
@@ -854,31 +867,31 @@ display: flex;
         }
     }
 
-         .page-numbers {
-             width: 42px;
-             height: 42px;
-             margin: 0 5px;
-             line-height: 42px;
-             text-align: center;
-             border-radius: 50%;
-             display: inline-block;
-             color: var(--blackColor);
-             box-shadow: 0 2px 5px 0 #d8dde6;
-             background-color: var(--whiteColor);
-    
-             font: {
-                 size: 16px;
-                 weight: 700;
-             }
-    
-             ;
-    
-             &.current,
-             &:hover {
-                 background: var(--whiteColor);
-                 color: var(--primaryColor);
-             }
-         }
+    .page-numbers {
+        width: 42px;
+        height: 42px;
+        margin: 0 5px;
+        line-height: 42px;
+        text-align: center;
+        border-radius: 50%;
+        display: inline-block;
+        color: var(--blackColor);
+        box-shadow: 0 2px 5px 0 #d8dde6;
+        background-color: var(--whiteColor);
+
+        font: {
+            size: 16px;
+            weight: 700;
+        }
+
+        ;
+
+        &.current,
+        &:hover {
+            background: var(--whiteColor);
+            color: var(--primaryColor);
+        }
+    }
 }
 
 .related-courses {
@@ -1197,7 +1210,7 @@ display: flex;
         .default-btn {
             margin-top: 15px;
         }
-                    
+
     }
 
     // Default Btn
@@ -1270,7 +1283,7 @@ display: flex;
 /* Min width 576px to Max width 767px */
 @media only screen and (min-width : 576px) and (max-width : 767px) {
 
-.pb-70 {
+    .pb-70 {
         padding-bottom: 30px;
     }
 
@@ -1293,170 +1306,170 @@ display: flex;
     .mr-15 {
         margin-right: 0;
     }
-    
 
-        .section-title {
-            &.left-title {
-                    text-align: center;
-                }
+
+    .section-title {
+        &.left-title {
+            text-align: center;
+        }
+    }
+
+    .page-content {
+        text-align: center;
+
+        .pages-link {
+            li {
+                font-size: 15px;
+            }
         }
 
-                 .page-content {
-                     text-align: center;
-        
-                     .pages-link {
-                         li {
-                             font-size: 15px;
-                         }
-                     }
-        
-                     .page-title {
-                         margin-bottom: 15px;
-        
-                         &.text-left {
-                             text-align: center;
-                         }
-        
-                         h2 {
-                             font-size: 30px;
-                         }
-                     }
-                 }
-        
-                 .pagination-area {
-                     margin-top: 0;
+        .page-title {
+            margin-bottom: 15px;
 
-                        .page-numbers {
-                                width: 35px;
-                                height: 35px;
-                                font-size: 14px;
-                                line-height: 35px;
-                            }
-                 }
-        
-                 .categories-slide {
-                     .owl-theme {
-                         .owl-nav {
-                             margin: {
-                                 bottom: 20px;
-                                 top: -10px;
-                             }
-        
-                             ;
-        
-                             .owl-prev,
-                             .owl-next {
-                                 top: 0;
-                                 left: 0;
-                                 position: relative;
-                                 transform: translateY(0);
-        
-                                 margin: {
-                                     top: 0;
-                                     bottom: 0;
-                                 }
-        
-                                 ;
-                             }
-        
-                             .owl-nav {
-                                 margin: {
-                                     left: 0;
-                                     right: 3px;
-                                 }
-        
-                                 ;
-                             }
-        
-                             .owl-next {
-                                 left: 0;
-                                 right: 0;
-        
-                                 margin: {
-                                     right: 0;
-                                     left: 3px;
-                                 }
-        
-                                 ;
-                             }
-                         }
-                     }
-                 }
-        
-                 .courses-tabs {
-                     .nav-tabs {
-                         text-align: center;
-        
-                         margin: {
-                             top: 0;
-                             bottom: 15px;
-                         }
-        
-                         ;
-        
-                         .nav-item {
-                             margin-bottom: 13px;
-                         }
-                     }
-                 }
-        
-                 .instructors-slide {
-                     .owl-theme {
-                         .owl-nav {
-                             transform: translateY(0);
-                             position: relative;
-                             bottom: 0;
-                             left: 0;
-        
-                             margin: {
-                                 bottom: 20px;
-                                 top: -10px;
-                             }
-        
-                             ;
-        
-                             .owl-prev,
-                             .owl-next {
-                                 top: 0;
-                                 left: 0;
-                                 position: relative;
-                                 transform: translateY(0);
-        
-                                 margin: {
-                                     top: 0;
-                                     bottom: 0;
-                                 }
-        
-                                 ;
-                             }
-        
-                             .owl-nav {
-                                 margin: {
-                                     left: 0;
-                                     right: 3px;
-                                 }
-        
-                                 ;
-                             }
-        
-                             .owl-next {
-                                 left: 0;
-                                 right: 0;
-        
-                                 margin: {
-                                     right: 0;
-                                     left: 3px;
-                                 }
-        
-                                 ;
-                             }
-                         }
-                     }
-                 }
+            &.text-left {
+                text-align: center;
+            }
 
-
-
+            h2 {
+                font-size: 30px;
+            }
+        }
     }
+
+    .pagination-area {
+        margin-top: 0;
+
+        .page-numbers {
+            width: 35px;
+            height: 35px;
+            font-size: 14px;
+            line-height: 35px;
+        }
+    }
+
+    .categories-slide {
+        .owl-theme {
+            .owl-nav {
+                margin: {
+                    bottom: 20px;
+                    top: -10px;
+                }
+
+                ;
+
+                .owl-prev,
+                .owl-next {
+                    top: 0;
+                    left: 0;
+                    position: relative;
+                    transform: translateY(0);
+
+                    margin: {
+                        top: 0;
+                        bottom: 0;
+                    }
+
+                    ;
+                }
+
+                .owl-nav {
+                    margin: {
+                        left: 0;
+                        right: 3px;
+                    }
+
+                    ;
+                }
+
+                .owl-next {
+                    left: 0;
+                    right: 0;
+
+                    margin: {
+                        right: 0;
+                        left: 3px;
+                    }
+
+                    ;
+                }
+            }
+        }
+    }
+
+    .courses-tabs {
+        .nav-tabs {
+            text-align: center;
+
+            margin: {
+                top: 0;
+                bottom: 15px;
+            }
+
+            ;
+
+            .nav-item {
+                margin-bottom: 13px;
+            }
+        }
+    }
+
+    .instructors-slide {
+        .owl-theme {
+            .owl-nav {
+                transform: translateY(0);
+                position: relative;
+                bottom: 0;
+                left: 0;
+
+                margin: {
+                    bottom: 20px;
+                    top: -10px;
+                }
+
+                ;
+
+                .owl-prev,
+                .owl-next {
+                    top: 0;
+                    left: 0;
+                    position: relative;
+                    transform: translateY(0);
+
+                    margin: {
+                        top: 0;
+                        bottom: 0;
+                    }
+
+                    ;
+                }
+
+                .owl-nav {
+                    margin: {
+                        left: 0;
+                        right: 3px;
+                    }
+
+                    ;
+                }
+
+                .owl-next {
+                    left: 0;
+                    right: 0;
+
+                    margin: {
+                        right: 0;
+                        left: 3px;
+                    }
+
+                    ;
+                }
+            }
+        }
+    }
+
+
+
+}
 
 /* Min width 768px to Max width 991px */
 @media only screen and (min-width : 768px) and (max-width : 991px) {
@@ -1558,152 +1571,152 @@ display: flex;
 
     }
 
-                .instructors-slide {
-                    .owl-theme {
-                        .owl-nav {
-                            transform: translateY(0);
-                            position: relative;
-                            bottom: 0;
-                            left: 0;
-        
-                            margin: {
-                                bottom: 20px;
-                                top: -10px;
-                            }
-        
-                            ;
-        
-                            .owl-prev,
-                            .owl-next {
-                                top: 0;
-                                left: 0;
-                                width: 30px;
-                                height: 30px;
-                                line-height: 30px;
-                                position: relative;
-                                transform: translateY(0);
-        
-                                margin: {
-                                    top: 0;
-                                    bottom: 0;
-                                }
-        
-                                ;
-                            }
-        
-                            .owl-nav {
-                                margin: {
-                                    left: 0;
-                                    right: 3px;
-                                }
-        
-                                ;
-                            }
-        
-                            .owl-next {
-                                left: 0;
-                                right: 0;
-        
-                                margin: {
-                                    right: 0;
-                                    left: 3px;
-                                }
-        
-                                ;
-                            }
-                        }
+    .instructors-slide {
+        .owl-theme {
+            .owl-nav {
+                transform: translateY(0);
+                position: relative;
+                bottom: 0;
+                left: 0;
+
+                margin: {
+                    bottom: 20px;
+                    top: -10px;
+                }
+
+                ;
+
+                .owl-prev,
+                .owl-next {
+                    top: 0;
+                    left: 0;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    position: relative;
+                    transform: translateY(0);
+
+                    margin: {
+                        top: 0;
+                        bottom: 0;
+                    }
+
+                    ;
+                }
+
+                .owl-nav {
+                    margin: {
+                        left: 0;
+                        right: 3px;
+                    }
+
+                    ;
+                }
+
+                .owl-next {
+                    left: 0;
+                    right: 0;
+
+                    margin: {
+                        right: 0;
+                        left: 3px;
+                    }
+
+                    ;
+                }
+            }
+        }
+    }
+
+    .our-happy-student-slide {
+        .owl-theme {
+            .owl-nav {
+                margin-top: 20px;
+
+                .owl-prev,
+                .owl-next {
+                    position: relative;
+                    margin-right: 10px;
+                }
+
+                .owl-next {
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    .page-content {
+        max-width: 100%;
+
+        .pages-link {
+            li {
+                line-height: 1;
+            }
+        }
+
+        h2 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        &.text-start {
+            margin: {
+                left: 0;
+                right: 0;
+            }
+
+            ;
+
+            .review {
+                margin-bottom: 15px;
+
+                i {
+                    line-height: 1;
+                    font-size: 18px;
+                    color: #f6b429;
+                    margin-right: 3px;
+                }
+
+                span {
+                    position: relative;
+                    font-size: 15px;
+                    top: -2px;
+                }
+            }
+
+            .instructors-status {
+                padding-left: 0;
+                margin-bottom: 15px;
+                list-style-type: none;
+
+                li {
+                    display: inline-block;
+                    position: relative;
+                    padding-left: 15px;
+                    font-size: 15px;
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+
+                    img {
+                        position: relative;
+                        margin-right: 5px;
+                        top: -2px;
+                    }
+
+                    i {
+                        color: var(--primaryColor);
+                        position: relative;
+                        margin-right: 0;
+                        top: 2px;
                     }
                 }
-        
-                .our-happy-student-slide {
-                    .owl-theme {
-                        .owl-nav {
-                            margin-top: 20px;
-        
-                            .owl-prev,
-                            .owl-next {
-                                position: relative;
-                                margin-right: 10px;
-                            }
-        
-                            .owl-next {
-                                left: 0;
-                            }
-                        }
-                    }
-                }
-        
-                .page-content {
-                    max-width: 100%;
-        
-                    .pages-link {
-                        li {
-                            line-height: 1;
-                        }
-                    }
-        
-                    h2 {
-                        font-size: 25px;
-                        margin-bottom: 10px;
-                    }
-        
-                    &.text-start {
-                        margin: {
-                            left: 0;
-                            right: 0;
-                        }
-        
-                        ;
-        
-                        .review {
-                            margin-bottom: 15px;
-        
-                            i {
-                                line-height: 1;
-                                font-size: 18px;
-                                color: #f6b429;
-                                margin-right: 3px;
-                            }
-        
-                            span {
-                                position: relative;
-                                font-size: 15px;
-                                top: -2px;
-                            }
-                        }
-        
-                        .instructors-status {
-                            padding-left: 0;
-                            margin-bottom: 15px;
-                            list-style-type: none;
-        
-                            li {
-                                display: inline-block;
-                                position: relative;
-                                padding-left: 15px;
-                                font-size: 15px;
-        
-                                &:first-child {
-                                    padding-left: 0;
-                                }
-        
-                                img {
-                                    position: relative;
-                                    margin-right: 5px;
-                                    top: -2px;
-                                }
-        
-                                i {
-                                    color: var(--primaryColor);
-                                    position: relative;
-                                    margin-right: 0;
-                                    top: 2px;
-                                }
-                            }
-                        }
-                    }
-        
-                }
+            }
+        }
+
+    }
 
 
 }
@@ -1712,7 +1725,7 @@ display: flex;
 @media only screen and (min-width : 992px) and (max-width : 1199px) {
 
 
-.pl-15 {
+    .pl-15 {
         padding-left: 0;
     }
 
@@ -1772,90 +1785,91 @@ display: flex;
         }
     }
 
-        .categories-slide {
-            .owl-theme {
+    .categories-slide {
+        .owl-theme {
+            .owl-nav {
+                margin: {
+                    bottom: 20px;
+                    top: -10px;
+                }
+
+                ;
+
+                .owl-prev,
+                .owl-next {
+                    top: 0;
+                    left: 0;
+                    position: relative;
+                    transform: translateY(0);
+
+                    margin: {
+                        top: 0;
+                        bottom: 0;
+                    }
+
+                    ;
+                }
+
                 .owl-nav {
                     margin: {
-                        bottom: 20px;
-                        top: -10px;
+                        left: 0;
+                        right: 3px;
                     }
-    
+
                     ;
-    
-                    .owl-prev,
-                    .owl-next {
-                        top: 0;
-                        left: 0;
-                        position: relative;
-                        transform: translateY(0);
-    
-                        margin: {
-                            top: 0;
-                            bottom: 0;
-                        }
-    
-                        ;
-                    }
-    
-                    .owl-nav {
-                        margin: {
-                            left: 0;
-                            right: 3px;
-                        }
-    
-                        ;
-                    }
-    
-                    .owl-next {
-                        left: 0;
-                        right: 0;
-    
-                        margin: {
-                            right: 0;
-                            left: 3px;
-                        }
-    
-                        ;
-                    }
                 }
-            }
-        }
-    
-        .courses-tabs {
-            .nav-tabs {
-                .nav-item {
-                    font-size: 15px;
-    
+
+                .owl-next {
+                    left: 0;
+                    right: 0;
+
                     margin: {
-                        right: 10px;
-                        left: 10px;
+                        right: 0;
+                        left: 3px;
                     }
-    
+
                     ;
                 }
             }
         }
+    }
+
+    .courses-tabs {
+        .nav-tabs {
+            .nav-item {
+                font-size: 15px;
+
+                margin: {
+                    right: 10px;
+                    left: 10px;
+                }
+
+                ;
+            }
+        }
+    }
 
 }
 
 /* Min width 1200px to Max width 1399px */
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
     .categories-slide {
-            .owl-theme {
-                .owl-nav {
-    
-                    .owl-prev,
-                    .owl-next {
-                        left: -40px;
-                    }
-    
-                    .owl-next {
-                        right: -40px;
-                        left: auto;
-                    }
+        .owl-theme {
+            .owl-nav {
+
+                .owl-prev,
+                .owl-next {
+                    left: -40px;
+                }
+
+                .owl-next {
+                    right: -40px;
+                    left: auto;
                 }
             }
-        }}
+        }
+    }
+}
 
 /* Min width 1600px */
 @media only screen and (min-width: 1600px) {}

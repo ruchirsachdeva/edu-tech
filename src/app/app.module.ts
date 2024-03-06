@@ -27,13 +27,14 @@ import { CourseItemComponent } from './components/common/course-item/course-item
 import { EnrolledCoursesComponent } from './components/dashboard/enrolled-courses/enrolled-courses.component';
 import { MyProfileComponent } from './components/dashboard/my-profile/my-profile.component';
 import { CourseDetailsComponent } from './components/pages/course-details/course-details.component';
+import { QuizAttemptsComponent } from './components/dashboard/quiz-attempts/quiz-attempts.component';
 
 
 
 
 
 @NgModule({
-  declarations: [AppComponent,HomeComponent, NavbarComponent,FooterComponent,HomeBannerComponent, FeaturedCoursesComponent, AboutSectionComponent, TestimonialsComponent, AccreditationsComponent, CoursesComponent, LoginComponent, RegisterComponent, DashboardComponent, CourseItemComponent, EnrolledCoursesComponent, MyProfileComponent, CourseDetailsComponent],
+  declarations: [AppComponent,HomeComponent, NavbarComponent,FooterComponent,HomeBannerComponent, FeaturedCoursesComponent, AboutSectionComponent, TestimonialsComponent, AccreditationsComponent, CoursesComponent, LoginComponent, RegisterComponent, DashboardComponent, CourseItemComponent, EnrolledCoursesComponent, MyProfileComponent, CourseDetailsComponent, QuizAttemptsComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,    HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }

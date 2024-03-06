@@ -8,6 +8,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { EnrolledCoursesComponent } from './components/dashboard/enrolled-courses/enrolled-courses.component';
 import { MyProfileComponent } from './components/dashboard/my-profile/my-profile.component';
 import { CourseDetailsComponent } from './components/pages/course-details/course-details.component';
+import { QuizAttemptsComponent } from './components/dashboard/quiz-attempts/quiz-attempts.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,8 @@ component: CourseDetailsComponent},
 component: EnrolledCoursesComponent},
     {  path: 'my-profile',
 component: MyProfileComponent},
+    {  path: 'my-quiz-attempts',
+component: QuizAttemptsComponent},
     ]
   }
 
