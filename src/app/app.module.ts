@@ -6,7 +6,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-courses.service';
+import { InMemoryDataService } from './services/in-memory-courses.service';
 
 
 import { AppComponent } from './app.component';
@@ -28,13 +28,19 @@ import { EnrolledCoursesComponent } from './components/dashboard/enrolled-course
 import { MyProfileComponent } from './components/dashboard/my-profile/my-profile.component';
 import { CourseDetailsComponent } from './components/pages/course-details/course-details.component';
 import { QuizAttemptsComponent } from './components/dashboard/quiz-attempts/quiz-attempts.component';
+import { QuizComponentComponent } from './components/contentItems/quiz-component/quiz-component.component';
+import { VideoComponentComponent } from './components/contentItems/video-component/video-component.component';
+import { LessonComponent } from './components/pages/lesson/lesson.component';
+import { CourseContentComponent } from './components/pages/course-content/course-content.component';
+import { LessonIntroComponent } from './components/contentItems/lesson-intro/lesson-intro.component';
+import { CourseCardComponent } from './components/dashboard/enrolled-courses/course-card/course-card.component';
 
 
 
 
 
 @NgModule({
-  declarations: [AppComponent,HomeComponent, NavbarComponent,FooterComponent,HomeBannerComponent, FeaturedCoursesComponent, AboutSectionComponent, TestimonialsComponent, AccreditationsComponent, CoursesComponent, LoginComponent, RegisterComponent, DashboardComponent, CourseItemComponent, EnrolledCoursesComponent, MyProfileComponent, CourseDetailsComponent, QuizAttemptsComponent],
+  declarations: [AppComponent,HomeComponent, NavbarComponent,FooterComponent,HomeBannerComponent, FeaturedCoursesComponent, AboutSectionComponent, TestimonialsComponent, AccreditationsComponent, CoursesComponent, LoginComponent, RegisterComponent, DashboardComponent, CourseItemComponent, EnrolledCoursesComponent, MyProfileComponent, CourseDetailsComponent, QuizAttemptsComponent, QuizComponentComponent, VideoComponentComponent, LessonComponent, CourseContentComponent, LessonIntroComponent, CourseCardComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,    HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }

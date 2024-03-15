@@ -1,0 +1,53 @@
+<div class="inner">
+  <div class="content">
+    <form id="quiz-form" class="quiz-form-wrapper">
+      <!-- Start Single Quiz  -->
+<div class="question">
+  <div class="quize-top-meta">
+    <div class="quize-top-left">
+      <span>Questions No: <strong>{{currentQuestionIndex + 1}} / {{questions.length}} </strong></span>
+      <span>Attempts Allowed: <strong>1</strong></span>
+    </div>
+    <div class="quize-top-right">
+      <span>Time remaining: <strong>No Limit</strong></span>
+    </div>
+  </div>
+  <hr>
+  
+  <div *ngIf="questions.length">
+<div *ngIf="currentQuestionIndex < questions.length">
+
+  <div class="rbt-single-quiz">
+    <h4>{{ questions[currentQuestionIndex].question }}</h4>
+    <div class="row g-3 mt--10">
+
+      <div *ngFor="let option of questions[currentQuestionIndex].options">
+
+        <div class="col-lg-6">
+          <p class="rbt-checkbox-wrapper mb--5">
+            <input name="rbt-checkbox" type="checkbox" (click)="onSelectOption(option)" [checked]="option === selectedOption">
+            <label for="rbt-checkbox" (click)="onSelectOption(option)" >{{option}}</label>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+    </div>
+
+</div>      <!-- Start Single Quiz  -->
+
+
+      <div class="rbt-quiz-btn-wrapper mt--30">
+        <button class="rbt-btn bg-primary-opacity btn-sm" id="prev-btn" type="button" *ngIf="!isFirstQuestion()"  (click)="onPreviousQuestion()">Previous</button>
+        <button class="rbt-btn bg-primary-opacity btn-sm" id="next-btn" type="button" *ngIf="!isLastQuestion()" (click)="onNextQuestion()" [disabled]="!selectedOption">Next</button>
+        <button *ngIf="isLastQuestion()"  class="rbt-btn btn-gradient btn-sm" [disabled]="!selectedOption" (click)="onClick($event)">Submit</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+

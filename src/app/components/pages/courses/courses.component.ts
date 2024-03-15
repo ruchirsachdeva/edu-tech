@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CourseService } from 'src/app/course.service';
+import { CourseService } from 'src/app/services/course.service';
 
 @Component({
   selector: 'app-courses',
@@ -9,12 +9,14 @@ import { CourseService } from 'src/app/course.service';
 export class CoursesComponent  implements OnInit {
 
      courses: any[] = [];
+     quiz: any[] = []
 
 
   constructor(private courseService: CourseService) { }
 
   ngOnInit() {
         this.getCourses();
+    this.getQuizQues();
 
   }
 
@@ -24,6 +26,16 @@ export class CoursesComponent  implements OnInit {
         
         console.log(this.courses);}
         );
+  }
+
+  getQuizQues(): void {
+    this.courseService.getQuizQues()
+      .subscribe(quizes => {
+        this.quiz = quizes
+
+        console.log(this.quiz);
+      }
+      );
   }
 
 }

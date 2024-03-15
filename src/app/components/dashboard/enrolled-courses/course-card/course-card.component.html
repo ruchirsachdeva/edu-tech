@@ -1,0 +1,31 @@
+  <div class="single-course-item">
+    <a routerLink="/courses-details" class="courses-img">
+      <img src="assets/images/courses/course-1.jpg" alt="Image">
+      <span class="levels">All Levels</span>
+      <span class="price">{{price}}</span>
+      <button type="submit" class="wishlist"><i class="ri-heart-line"></i></button>
+    </a>
+    <div class="courses-content">
+      <h3>
+        <a routerLink="/courses-details">
+{{courseName}}        </a>
+      </h3>
+      <ul class="review">
+        <li><i class="ri-star-fill"></i></li>
+        <li><i class="ri-star-fill"></i></li>
+        <li><i class="ri-star-fill"></i></li>
+        <li><i class="ri-star-fill"></i></li>
+        <li><i class="ri-star-fill"></i></li>
+        <li><span>5.00(15)</span></li>
+      </ul>
+      <ul class="status d-flex justify-content-between align-items-center">
+        <li>
+          <a href="/course-content"> Course Content</a>
+        </li>
+        <!-- <li>
+                                            <i class="ri-bar-chart-horizontal-line"></i>
+                                            <strong>100% Completed</strong>
+                                        </li> -->
+      </ul>
+    </div>
+  </div>

@@ -9,6 +9,10 @@ import { EnrolledCoursesComponent } from './components/dashboard/enrolled-course
 import { MyProfileComponent } from './components/dashboard/my-profile/my-profile.component';
 import { CourseDetailsComponent } from './components/pages/course-details/course-details.component';
 import { QuizAttemptsComponent } from './components/dashboard/quiz-attempts/quiz-attempts.component';
+import { LessonComponent } from './components/pages/lesson/lesson.component';
+import { CourseContentComponent } from './components/pages/course-content/course-content.component';
+import { QuizComponentComponent } from './components/contentItems/quiz-component/quiz-component.component';
+import { LessonIntroComponent } from './components/contentItems/lesson-intro/lesson-intro.component';
 
 const routes: Routes = [
   {
@@ -38,8 +42,23 @@ component: MyProfileComponent},
     {  path: 'my-quiz-attempts',
 component: QuizAttemptsComponent},
     ]
-  }
+  },
 
+{  path: 'course-content',
+component: CourseContentComponent,
+},
+  {  path: 'lesson',
+    component: LessonComponent, children: [
+      {
+        path: 'quiz',
+        component: QuizComponentComponent
+      },
+      {
+        path: 'lesson-intro',
+        component: LessonIntroComponent
+      },
+    
+    ]}
 
 ];
 

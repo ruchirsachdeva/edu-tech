@@ -1,0 +1,69 @@
+  <div class="rbt-course-container">
+
+    <div class="rbt-lesson-leftsidebar">
+      <div class="rbt-course-feature-inner rbt-search-activation">
+        <div class="section-title">
+          <h4 class="rbt-title-style-3">Course Content</h4>
+        </div>
+
+        <div class="lesson-search-wrapper">
+          <form action="#" class="rbt-search-style-1">
+            <input class="rbt-search-active" type="text" placeholder="Search Lesson">
+            <button class="search-btn disabled"><i class="feather-search"></i></button>
+          </form>
+        </div>
+
+        <hr class="mt--10">
+
+        <div class="rbt-accordion-style rbt-accordion-02 for-right-content ">
+          <div *ngFor="let course of courses; let i = index" class="accordion-item card">
+            <h2 class="accordion-header card-header">
+              <button class="accordion-button" type="button" (click)="toggleSection(i)">
+                {{ course.title }}
+                <span class="rbt-badge-5 ml--10">{{ course.lessons.length }}</span>
+              </button>
+            </h2>
+            <div *ngIf="course.show" class="accordion-collapse collapse show">
+              <div class="accordion-body card-body">
+                <ul class="rbt-course-main-content liststyle">
+                  <li *ngFor="let lesson of course.lessons">
+                    <a href={{lesson.href}}>
+                      <div class="course-content-left">
+                        <i class="feather-play-circle"></i> <span class="text">{{ lesson.name }} hello</span>
+                      </div>
+                      <div class="course-content-right">
+                        <span class="min-lable">{{ lesson.duration }}</span>
+                        <span class="rbt-check" *ngIf="lesson.completed"><i class="feather-check"></i></span>
+                        <span class="rbt-check unread" *ngIf="!lesson.completed"><i class="feather-circle"></i></span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="rbt-lesson-rightsidebar">
+
+
+      <ng-container *ngIf="(router.url === '/lesson'); else elseBlock">
+
+        <div class="container-fluid">
+          <app-video-component></app-video-component>
+        </div>
+      </ng-container>
+
+
+      <ng-template #elseBlock>
+        <router-outlet></router-outlet>
+      </ng-template>
+            </div>
+
+    </div>
+
+  

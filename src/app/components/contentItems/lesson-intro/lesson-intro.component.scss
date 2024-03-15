@@ -1,0 +1,46 @@
+.inner {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+
+    .content {
+        margin-top: 20px;
+    }
+
+    .section-title{
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 767.98px) {
+    .inner {
+        padding: 15px;
+        margin: 10px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .inner {
+        padding: 20px;}
+    }
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .inner {
+        padding: 30px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .inner {
+        max-width: 1000px;
+    }
+}
