@@ -1,184 +1,84 @@
-/* Base styles for .inner and its child elements */
-.inner {
+/* styles.css */
+.quiz-container {
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-
-    .content {
-        margin-top: 20px;
-    }
-
-    .quiz-form-wrapper {
-        padding: 20px;
-        background-color: #f8f9fa;
-        border-radius: 5px;
-    }
-
-        .quize-top-meta {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-    
-            span {
-                color: #666;
-                font-size: 0.9rem;
-            }
-        }
-    
-        .question {
-            h4 {
-                color: #333;
-                font-weight: 600;
-                margin-bottom: 15px;
-            }
-    
-            .row {
-                margin-right: -15px;
-                margin-left: -15px;
-            }
-    
-            .col-lg-6 {
-                padding-right: 15px;
-                padding-left: 15px;
-                margin-bottom: 10px;
-            }
-    
-            .rbt-checkbox-wrapper,
-            .rbt-form-check {
-                margin-bottom: 10px;
-    
-                input[type="checkbox"],
-                input[type="radio"] {
-                    margin-right: 10px;
-                }
-    
-                label {
-                    font-size: 1rem;
-                    color: #555;
-                }
-            }
-    
-            .rbt-checkbox-wrapper label,
-            .rbt-form-check label {
-                border: 2px solid black;
-                height: 40px;
-                display: flex;
-                align-items: center;
-                padding: 20px;
-                border-radius: 6px;
-                padding-left: 30px;
-                cursor: pointer;
-            }
-    
-            input[type=checkbox]:checked~label {
-                border: 2px solid var(--primaryColor);
-            }
-        }
-
-    .rbt-quiz-btn-wrapper {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 30px;
-
-        .rbt-btn {
-            padding: 10px 20px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 0.9rem;
-            transition: background-color 0.3s ease;
-
-            &:hover {
-                opacity: 0.9;
-            }
-        }
-
-        .btn-sm {
-            padding: 5px 15px;
-            font-size: 0.8rem;
-        }
-
-        .bg-primary-opacity {
-            background-color: rgba(0, 123, 255, 0.1);
-            color: #007bff;
-
-            &:hover {
-                background-color: rgba(0, 123, 255, 0.2);
-            }
-        }
-
-        .btn-gradient {
-            background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
-            color: white;
-
-            &:hover {
-                background-image: linear-gradient(to right, #8a2be2 0%, #4095ff 100%);
-            }
-        }
-    }
-
-
-
-            
- 
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
 }
 
-
-
-/* Responsive adjustments */
-@media (max-width: 767.98px) {
-    .inner {
-        padding: 15px;
-        margin: 10px;
-
-        .quiz-form-wrapper {
-            padding: 15px;
-        }
-
-        .quize-top-meta span {
-            font-size: 0.8rem;
-        }
-
-        .question h4 {
-            font-size: 1rem;
-        }
-
-        .rbt-quiz-btn-wrapper .rbt-btn {
-            padding: 5px 10px;
-            font-size: 0.8rem;
-        }
-    }
+.quiz-header {
+    background-color: #007bff;
+    color: #ffffff;
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .inner {
-        padding: 20px;
-
-        .quiz-form-wrapper {
-            padding: 20px;
-        }
-    }
+.quiz-title {
+    margin: 0;
+    color: #ffffff;
 }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    .inner {
-        padding: 30px;
-
-        .quiz-form-wrapper {
-            padding: 25px;
-        }
-    }
+.progress {
+    height: 20px;
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    .inner {
-        max-width: 1000px;
-    }
+.progress-bar {
+    background-color: #ffc107;
+}
+
+.question-box {
+    margin-bottom: 30px;
+}
+
+.question {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.answer-option {
+    display: block;
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.answer-option:hover, .answer-option:focus {
+    background-color: #e9ecef;
+    transform: scale(1.05);
+}
+
+.label-text {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    color: #000;
+    font-weight: 500;
+}
+
+.answer-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.answer-option input[type="radio"]:checked ~ .label-text {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.quiz-time-info .badge {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 20px;
 }

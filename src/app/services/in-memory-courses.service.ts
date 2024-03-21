@@ -79,32 +79,31 @@ export class InMemoryDataService implements InMemoryDbService {
 
     ];
 
-    const quizQue: any = [
-      {
-        id: 1,
-        question: 'what is your name',
-        options: ["a", "b", "c", "d"]
-
-      },
-      {
-        id: 2,
-        question: 'what is your age',
-        options: ["a", "b", "c", "d"]
-
-      },
-      {
-        id: 3,
-        question: 'what is your height',
-        options: ["a", "b", "c", "d"]
-
-      },
-      {
-        id: 4,
-        question: 'what is your weight',
-        options: ["a", "b", "c", "d"]
-
-      },
-    ];
+    const quizQue: any = {
+      "timeLimit": 900, // 15 minutes in seconds
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is your name?",
+          "options": ["a", "b", "c", "d"]
+        },
+        {
+          "id": 2,
+          "question": "What is your age?",
+          "options": ["a", "b", "c", "d"]
+        },
+        {
+          "id": 3,
+          "question": "What is your height?",
+          "options": ["a", "b", "c", "d"]
+        },
+        {
+          "id": 4,
+          "question": "What is your weight?",
+          "options": ["a", "b", "c", "d"]
+        }
+      ]
+    };
 
     const users = [
       {

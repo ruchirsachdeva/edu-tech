@@ -22,8 +22,8 @@ export class CourseService {
   return this.http.get<any>(`${this.coursesUrl}/${id}`);
 }
 
-  getQuizQues(): Observable<any[]> {
-    return this.http.get<any[]>(this.quizUrl);
+  getQuizQues(): Observable<any> {
+    return this.http.get<any>(this.quizUrl);
   }
 
   getUserById(id: string): Observable<any> {
