@@ -17,6 +17,10 @@ import { InstructorDashboardComponent } from './components/instructor-dashboard/
 import { PublishedCoursesComponent } from './components/instructor-dashboard/published-courses/published-courses.component';
 import { AddCourseComponent } from './components/instructor-dashboard/add-course/add-course.component';
 import { AssignmentsComponent } from './components/instructor-dashboard/assignments/assignments.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { TotalCoursesComponent } from './components/admin-dashboard/total-courses/total-courses.component';
+import { EnrolledStudentsComponent } from './components/admin-dashboard/enrolled-students/enrolled-students.component';
+import { RegisteredInstructorsComponent } from './components/admin-dashboard/registered-instructors/registered-instructors.component';
 
 const routes: Routes = [
   {
@@ -77,6 +81,25 @@ const routes: Routes = [
         path: 'assignments',
         component: AssignmentsComponent
       },
+
+    ]
+  }
+  ,
+
+  {
+    path: 'admin-dashboard',
+    component: AdminDashboardComponent,
+    children: [
+      {
+        path: 'total-courses',
+        component: TotalCoursesComponent
+      }, {
+        path: 'enrolled-students',
+        component: EnrolledStudentsComponent
+      }, {
+        path: 'registered-instructors',
+        component: RegisteredInstructorsComponent
+      }
 
     ]
   }

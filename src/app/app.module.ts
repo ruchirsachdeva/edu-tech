@@ -39,13 +39,17 @@ import { InstructorDashboardComponent } from './components/instructor-dashboard/
 import { PublishedCoursesComponent } from './components/instructor-dashboard/published-courses/published-courses.component';
 import { AddCourseComponent } from './components/instructor-dashboard/add-course/add-course.component';
 import { AssignmentsComponent } from './components/instructor-dashboard/assignments/assignments.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { TotalCoursesComponent } from './components/admin-dashboard/total-courses/total-courses.component';
+import { EnrolledStudentsComponent } from './components/admin-dashboard/enrolled-students/enrolled-students.component';
+import { RegisteredInstructorsComponent } from './components/admin-dashboard/registered-instructors/registered-instructors.component';
 
 
 
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NavbarComponent, FooterComponent, HomeBannerComponent, FeaturedCoursesComponent, AboutSectionComponent, TestimonialsComponent, AccreditationsComponent, CoursesComponent, LoginComponent, RegisterComponent, DashboardComponent, CourseItemComponent, EnrolledCoursesComponent, MyProfileComponent, CourseDetailsComponent, QuizAttemptsComponent, QuizComponentComponent, VideoComponentComponent, LessonComponent, CourseContentComponent, LessonIntroComponent, CourseCardComponent, InstructorDashboardComponent, PublishedCoursesComponent, AddCourseComponent, AssignmentsComponent],
+  declarations: [AppComponent, HomeComponent, NavbarComponent, FooterComponent, HomeBannerComponent, FeaturedCoursesComponent, AboutSectionComponent, TestimonialsComponent, AccreditationsComponent, CoursesComponent, LoginComponent, RegisterComponent, DashboardComponent, CourseItemComponent, EnrolledCoursesComponent, MyProfileComponent, CourseDetailsComponent, QuizAttemptsComponent, QuizComponentComponent, VideoComponentComponent, LessonComponent, CourseContentComponent, LessonIntroComponent, CourseCardComponent, InstructorDashboardComponent, PublishedCoursesComponent, AddCourseComponent, AssignmentsComponent, AdminDashboardComponent, TotalCoursesComponent, EnrolledStudentsComponent, RegisteredInstructorsComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule,ReactiveFormsModule, HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }

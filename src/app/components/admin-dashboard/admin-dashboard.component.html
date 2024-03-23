@@ -1,0 +1,92 @@
+<!-- Dashboard -->
+<div class="dashboard-area ptb-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-12">
+        <div class="dashboard-sidebar">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                routerLink="/admin-dashboard">
+                <i class="bx bx-home"></i>
+                Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                routerLink="/admin-dashboard/total-courses">
+                <i class="bx bx-book-open"></i>
+                Total Courses
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                routerLink="/admin-dashboard/enrolled-students">
+                <i class="bx bx-user"></i>
+                Enrolled Students </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                routerLink="/admin-dashboard/registered-instructors">
+                <i class="ri-presentation-line"></i>
+                Registered Instructors </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                routerLink="/dashboard/reviews">
+                <i class="bx bx-star"></i>
+                Reviews
+              </a>
+            </li> -->
+
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/">
+                <i class='ri-logout-circle-line'></i>
+                Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="col-lg-9 col-md-12">
+        <ng-container *ngIf="(router.url === '/admin-dashboard'); else elseBlock">
+
+<div class="container-fluid">
+
+  <!-- Total -->
+  <div class="row justify-content-center">
+    <div class="col-xl-4 col-lg-4 col-md-4 col-6">
+      <div class="db-single-courses">
+        <i class="ri-book-open-line"></i>
+        <h2>{{""}}</h2>
+        <span>Total Courses</span>
+      </div>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-4 col-6">
+      <div class="db-single-courses">
+        <i class="ri-user-fill"></i>
+        <h2>{{""}}</h2>
+        <span>Enrolled Students</span>
+      </div>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-4 col-6">
+      <div class="db-single-courses">
+        <i class="ri-presentation-line"></i>
+        <h2>{{""}}</h2>
+        <span>Registered Insctructors</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+        </ng-container>
+        <ng-template #elseBlock>
+          <router-outlet></router-outlet>
+        </ng-template>
+
+      </div>
+    </div>
+  </div>
+</div>
