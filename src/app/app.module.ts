@@ -1,6 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
@@ -34,14 +35,18 @@ import { LessonComponent } from './components/pages/lesson/lesson.component';
 import { CourseContentComponent } from './components/pages/course-content/course-content.component';
 import { LessonIntroComponent } from './components/contentItems/lesson-intro/lesson-intro.component';
 import { CourseCardComponent } from './components/dashboard/enrolled-courses/course-card/course-card.component';
+import { InstructorDashboardComponent } from './components/instructor-dashboard/instructor-dashboard.component';
+import { PublishedCoursesComponent } from './components/instructor-dashboard/published-courses/published-courses.component';
+import { AddCourseComponent } from './components/instructor-dashboard/add-course/add-course.component';
+import { AssignmentsComponent } from './components/instructor-dashboard/assignments/assignments.component';
 
 
 
 
 
 @NgModule({
-  declarations: [AppComponent,HomeComponent, NavbarComponent,FooterComponent,HomeBannerComponent, FeaturedCoursesComponent, AboutSectionComponent, TestimonialsComponent, AccreditationsComponent, CoursesComponent, LoginComponent, RegisterComponent, DashboardComponent, CourseItemComponent, EnrolledCoursesComponent, MyProfileComponent, CourseDetailsComponent, QuizAttemptsComponent, QuizComponentComponent, VideoComponentComponent, LessonComponent, CourseContentComponent, LessonIntroComponent, CourseCardComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,    HttpClientModule,
+  declarations: [AppComponent, HomeComponent, NavbarComponent, FooterComponent, HomeBannerComponent, FeaturedCoursesComponent, AboutSectionComponent, TestimonialsComponent, AccreditationsComponent, CoursesComponent, LoginComponent, RegisterComponent, DashboardComponent, CourseItemComponent, EnrolledCoursesComponent, MyProfileComponent, CourseDetailsComponent, QuizAttemptsComponent, QuizComponentComponent, VideoComponentComponent, LessonComponent, CourseContentComponent, LessonIntroComponent, CourseCardComponent, InstructorDashboardComponent, PublishedCoursesComponent, AddCourseComponent, AssignmentsComponent],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule,ReactiveFormsModule, HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     )],
@@ -49,4 +54,4 @@ import { CourseCardComponent } from './components/dashboard/enrolled-courses/cou
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule {}
+export class AppModule { }

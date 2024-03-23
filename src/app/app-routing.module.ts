@@ -13,41 +13,81 @@ import { LessonComponent } from './components/pages/lesson/lesson.component';
 import { CourseContentComponent } from './components/pages/course-content/course-content.component';
 import { QuizComponentComponent } from './components/contentItems/quiz-component/quiz-component.component';
 import { LessonIntroComponent } from './components/contentItems/lesson-intro/lesson-intro.component';
+import { InstructorDashboardComponent } from './components/instructor-dashboard/instructor-dashboard.component';
+import { PublishedCoursesComponent } from './components/instructor-dashboard/published-courses/published-courses.component';
+import { AddCourseComponent } from './components/instructor-dashboard/add-course/add-course.component';
+import { AssignmentsComponent } from './components/instructor-dashboard/assignments/assignments.component';
 
 const routes: Routes = [
   {
     path: '',
-  component: HomeComponent
+    component: HomeComponent
   },
 
-  {path: 'courses',
-component: CoursesComponent},
+  {
+    path: 'courses',
+    component: CoursesComponent
+  },
 
-  {path: 'login',
-component: LoginComponent},
-{  path: 'register',
-component: RegisterComponent},
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
 
-{  path: 'course-details/:id',
-component: CourseDetailsComponent},
+  {
+    path: 'course-details/:id',
+    component: CourseDetailsComponent
+  },
 
   {
     path: 'dashboard',
     component: DashboardComponent,
     children: [
-      {  path: 'enrolled-courses',
-component: EnrolledCoursesComponent},
-    {  path: 'my-profile',
-component: MyProfileComponent},
-    {  path: 'my-quiz-attempts',
-component: QuizAttemptsComponent},
+      {
+        path: 'enrolled-courses',
+        component: EnrolledCoursesComponent
+      },
+      {
+        path: 'my-profile',
+        component: MyProfileComponent
+      },
+      {
+        path: 'my-quiz-attempts',
+        component: QuizAttemptsComponent
+      },
     ]
   },
 
-{  path: 'course-content',
-component: CourseContentComponent,
-},
-  {  path: 'lesson',
+  {
+    path: 'instructor-dashboard',
+    component: InstructorDashboardComponent,
+    children: [
+      {
+        path: 'published-courses',
+        component: PublishedCoursesComponent
+      }, {
+        path: 'add-course',
+        component: AddCourseComponent
+      },
+      {
+        path: 'assignments',
+        component: AssignmentsComponent
+      },
+
+    ]
+  }
+  ,
+
+  {
+    path: 'course-content',
+    component: CourseContentComponent,
+  },
+  {
+    path: 'lesson',
     component: LessonComponent, children: [
       {
         path: 'quiz',
@@ -57,8 +97,9 @@ component: CourseContentComponent,
         path: 'lesson-intro',
         component: LessonIntroComponent
       },
-    
-    ]}
+
+    ]
+  }
 
 ];
 

@@ -1,0 +1,142 @@
+<!-- Dashboard -->
+<div class="dashboard-area ptb-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-12">
+        <div class="dashboard-sidebar">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                routerLink="/instructor-dashboard">
+                <i class="bx bx-home"></i>
+                Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                routerLink="/instructor-dashboard/published-courses">
+                <i class="bx bx-book-bookmark"></i>
+                Published Courses
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                routerLink="/instructor-dashboard/add-course">
+                <i class="bx bx-plus"></i>
+                Add Course </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                routerLink="/instructor-dashboard/assignments">
+                <i class="bx bx-notepad"></i>
+                Assignments </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                routerLink="/dashboard/reviews">
+                <i class="bx bx-star"></i>
+                Reviews
+              </a>
+            </li> -->
+
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/">
+                <i class='ri-logout-circle-line'></i>
+                Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="col-lg-9 col-md-12">
+        <ng-container *ngIf="(router.url === '/instructor-dashboard'); else elseBlock">
+
+          <h1 class="text-center">Instructor Profile</h1>
+          <div class="instructor-profile-area pt-100">
+            <div class="container">
+
+              <div class="row">
+                <div class="col-lg-4 col-md-12">
+                  <div class="instructor-profile-image text-center">
+                    <img src="assets/images/instructors/instructor1.jpg" alt="instructor-image">
+                    <ul class="social-links ps-0 mb-0 list-unstyled">
+                      <li class="d-inline-block">
+                        <a href="https://www.facebook.com/" target="_blank"
+                          class="position-relative d-block rounded-circle text-center">
+                          <i class="bx bxl-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="d-inline-block">
+                        <a href="https://linkedin.com/" target="_blank"
+                          class="position-relative d-block rounded-circle text-center">
+                          <i class="bx bxl-linkedin"></i>
+                        </a>
+                      </li>
+                      <li class="d-inline-block">
+                        <a href="https://twitter.com/" target="_blank"
+                          class="position-relative d-block rounded-circle text-center">
+                          <i class="bx bxl-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="d-inline-block">
+                        <a href="https://www.instagram.com/" target="_blank"
+                          class="position-relative d-block rounded-circle text-center">
+                          <i class='bx bxl-instagram'></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-8 col-md-12">
+                  <div class="instructor-profile-desc">
+                    <span class="sub-title d-block">Instructor</span>
+                    <h3>Earle Goodman</h3>
+                    <span class="designation d-block">Developer & Teacher</span>
+                    <ul class="ratings ps-0 list-unstyled">
+                      <li class="d-inline-block">20 Students</li>
+                      <li class="d-inline-block">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <span>5.0 (439 Reviews)</span>
+                      </li>
+                    </ul>
+                    <span class="d-block fw-medium title">About Me</span>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                      when
+                      looking at its layout. pointf using Lorem Ipsum is that it has a more-or-less normal distribution
+                      of
+                      letters, as opposed to using.</p>
+                    <p>Content here, content here', making it look like readable English. Many desktop publishing
+                      packages and web
+                      page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum.</p>
+                    <span class="d-block fw-medium title">Contact Me</span>
+                    <ul class="instructor-info ps-0 mb-0 list-unstyled">
+                      <li>
+                        <span>Address:</span> North Helenavile, FV77 8WS
+                      </li>
+                      <li>
+                        <span>Email:</span> hello&#64;earlegoodman.com
+                      </li>
+                      <li>
+                        <span>Phone:</span> (+0188) 7495 58599 5888
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+        <ng-template #elseBlock>
+          <router-outlet></router-outlet>
+        </ng-template>
+
+      </div>
+    </div>
+  </div>
+</div>

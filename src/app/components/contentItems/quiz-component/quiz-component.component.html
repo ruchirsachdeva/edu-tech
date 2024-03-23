@@ -30,7 +30,7 @@
                         <h4 class="question">{{questions[currentQuestionIndex].question}}</h4>
                         <div class="answers mt-4">
                             <label class="answer-option" *ngFor="let option of questions[currentQuestionIndex].options; let i = index">
-                                <input type="radio" name="questionOptions" hidden (change)="onSelectOption(option)" [checked]="userResponses[currentQuestionIndex]?.selectedOption === option">
+                                <input type="radio" name="questionOptions" hidden (change)="onSelectOption(option)" [checked]="userResponses[currentQuestionIndex].selectedOption === option">
                                 <span class="label-text">{{option}}</span>
                             </label>
                         </div>

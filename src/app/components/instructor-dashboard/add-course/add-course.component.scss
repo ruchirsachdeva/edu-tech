@@ -1,0 +1,28 @@
+.container {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    label {
+        font-weight: 500;
+    }
+
+    .btn-primary {
+        background-color: #0056b3;
+        border: none;
+
+        &:hover {
+            background-color: #004094;
+        }
+    }
+
+    .form-control,
+    .form-control:focus {
+        border-color: #ced4da;
+    }
+
+    .form-label {
+        margin-bottom: 0.5rem;
+    }
+}

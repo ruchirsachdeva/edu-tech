@@ -1,0 +1,60 @@
+<div class="container my-5">
+  <form [formGroup]="courseForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="mb-3">
+      <label for="title" class="form-label">Course Title</label>
+      <input type="text" id="title" formControlName="title" class="form-control" placeholder="Enter course title">
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea id="description" formControlName="description" class="form-control" rows="3"
+        placeholder="Course description"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="duration" class="form-label">Duration</label>
+      <input type="text" id="duration" formControlName="duration" class="form-control" placeholder="e.g., 10 weeks">
+    </div>
+
+    <div class="mb-3">
+      <label for="eligibility" class="form-label">Eligibility</label>
+      <input type="text" id="eligibility" formControlName="eligibility" class="form-control"
+        placeholder="Eligibility criteria">
+    </div>
+
+    <div class="mb-3">
+      <label for="learningObjectives" class="form-label">Learning Objectives</label>
+      <textarea id="learningObjectives" formControlName="learningObjectives" class="form-control" rows="3"
+        placeholder="What will the student learn"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="credits" class="form-label">Credits</label>
+      <input type="number" id="credits" formControlName="credits" class="form-control" placeholder="Number of credits">
+    </div>
+
+    <div class="mb-3">
+      <label for="startDate" class="form-label">Start Date</label>
+      <input type="date" id="startDate" formControlName="startDate" class="form-control">
+    </div>
+
+    <div class="mb-3">
+      <label for="curriculum" class="form-label">Curriculum</label>
+      <textarea id="curriculum" formControlName="curriculum" class="form-control" rows="4"
+        placeholder="Detailed curriculum"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="fee" class="form-label">Fee</label>
+      <input type="text" id="fee" formControlName="fee" class="form-control" placeholder="Course fee">
+    </div>
+
+    <div class="mb-3">
+      <label for="coordinators" class="form-label">Coordinators</label>
+      <input type="text" id="coordinators" formControlName="coordinators" class="form-control"
+        placeholder="Name of coordinators">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Course</button>
+  </form>
+</div>

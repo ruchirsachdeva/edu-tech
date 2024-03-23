@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-lg-8">
+      <h2 class="mb-4">Instructor Assignments</h2>
+      <div *ngFor="let assignment of assignments; let i = index" class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{assignment.title}}</h5>
+          <p class="card-text">{{assignment.description}}</p>
+          <p class="card-text"><small class="text-muted">Deadline: {{assignment.deadline | date}}</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Add New Assignment</h5>
+          <form (ngSubmit)="addAssignment()">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" [(ngModel)]="newAssignment.title" name="title"
+                required>
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea class="form-control" id="description" rows="3" [(ngModel)]="newAssignment.description"
+                name="description" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="deadline" class="form-label">Deadline</label>
+              <input type="date" class="form-control" id="deadline" [(ngModel)]="newAssignment.deadline" name="deadline"
+                required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.container {
+    .card {
+        border: 0;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+        .card-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            line-height: 1.5;
+        }
+    }
+
+    .card-body {
+        &:last-child {
+            border-bottom: 1px solid #eee;
+        }
+    }
+
+    // Custom button styling
+    button.btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+
+        &:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+    }
+
+    // Spacing and alignment
+    .mb-3 {
+        margin-bottom: 1rem !important;
+    }
+
+    // Add other styles as needed
+}

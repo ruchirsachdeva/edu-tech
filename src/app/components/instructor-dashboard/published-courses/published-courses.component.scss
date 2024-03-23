@@ -1,0 +1,15 @@
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (max-width: 767px) {
+ 
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+}
